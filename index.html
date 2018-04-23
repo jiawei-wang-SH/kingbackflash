@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>王者归来 国拍模拟器 - 上海拍牌</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--<link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+         Place favicon.ico in the root directory -->
+
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <link rel="stylesheet" href="css/moni.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container">
+        <div class="lineblock">
+            <ul class="userinfo">
+                <li>
+                    <div class="headtext leftpart">
+                        <span class="headlabel">投标号:</span>
+                        <span class="headlabel">6666666</span>
+                    </div>
+                    <div class="headtext rightpart">
+                        <span class="headlabel">客户名称:</span>
+                        <span class="headlabel">王者归来</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="headtext leftpart">
+                        <span class="headlabel">有效期至:</span>
+                        <span class="headlabel">2018年12月31日</span>
+                    </div>
+                    <div class="headtext rightpart">
+                        <span class="headlabel">已参拍次数:</span>
+                        <span class="headlabel">0次<span class="small">(不包括本场拍卖会)</span></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="flashContent" style="visibility: visible;"></div>
+    </div>
+
+
+    <script src="js/swfobject.js"></script>
+
+    <script>
+        window.onload = function(e) {
+            var swfVersionStr = "11.1.0";
+            var xiSwfUrlStr = "playerProductInstall.swf";
+            var flashvars = {};
+            var params = {};
+            params.quality = "high";
+            params.bgcolor = "#ffffff";
+            params.wmode = "transparent";
+            params.allowscriptaccess = "sameDomain";
+            params.allowfullscreen = "true";
+            var attributes = {};
+            attributes.id = "Mainbox";
+            attributes.name = "Mainbox";
+            attributes.align = "middle";
+            swfobject.embedSWF("/flash/Mainbox.swf", "flashContent", "900", "450", swfVersionStr, xiSwfUrlStr, flashvars, params, attributes);
+            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+        }
+    </script>
+
+</body>
+
+</html>
